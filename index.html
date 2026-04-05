@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SuperAgent — AI Agent Platform</title>
+  <meta name="description" content="Build and run personal AI agents that work for you in the background. Containerized, secure, and autonomous.">
+  <link rel="icon" href="icon.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0a0a0f;
+      color: #e0e0e8;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(120, 80, 220, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 28px;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #fff 0%, #c4b5fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .tagline {
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      color: #a0a0b8;
+      max-width: 540px;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+    }
+
+    .downloads {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 2rem;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #7c5ce0, #6340c8);
+      color: #fff;
+      box-shadow: 0 4px 24px rgba(124, 92, 224, 0.3);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 6px 32px rgba(124, 92, 224, 0.45);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #e0e0e8;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    .links {
+      display: flex;
+      gap: 2rem;
+      margin-top: 0.5rem;
+    }
+
+    .links a {
+      color: #8b8ba0;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.15s;
+    }
+
+    .links a:hover {
+      color: #c4b5fd;
+    }
+
+    .features {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem 6rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+
+    .feature h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #c4b5fd;
+    }
+
+    .feature p {
+      font-size: 0.9rem;
+      color: #8b8ba0;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <img src="icon.png" alt="SuperAgent" class="icon">
+    <h1>SuperAgent</h1>
+    <p class="tagline">Build and run personal AI agents that work for you autonomously in the background.</p>
+    <div class="downloads">
+      <a href="https://github.com/SkillfulAgents/SuperAgent/releases/latest/download/Superagent-Setup.exe" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" style="width:17px;height:17px"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+        Windows
+      </a>
+      <a href="https://github.com/SkillfulAgents/SuperAgent/releases/latest/download/Superagent-arm64.dmg" class="btn btn-primary">
+        <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        macOS
+      </a>
+      <a href="https://github.com/SkillfulAgents/SuperAgent" class="btn btn-secondary">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+    </div>
+    <div class="links">
+      <a href="https://github.com/SkillfulAgents/SuperAgent#getting-started">Docs</a>
+      <a href="https://github.com/SkillfulAgents/SuperAgent/releases">Releases</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>Containerized Agents</h3>
+      <p>Each agent runs in its own sandboxed container, keeping your computer secure.</p>
+    </div>
+    <div class="feature">
+      <h3>Connected Accounts</h3>
+      <p>Easily connect hundreds of accounts your agents can use on your behalf.</p>
+    </div>
+    <div class="feature">
+      <h3>Secure Integrations</h3>
+      <p>API calls are proxied outside the agent — it never sees your auth tokens.</p>
+    </div>
+    <div class="feature">
+      <h3>Background Tasks</h3>
+      <p>Agents schedule recurring tasks and future work, serving you autonomously.</p>
+    </div>
+    <div class="feature">
+      <h3>Browser Access</h3>
+      <p>Agents can spin up a web browser when no API is available.</p>
+    </div>
+    <div class="feature">
+      <h3>Dashboards & Artifacts</h3>
+      <p>Agents create dashboards so you can easily access information.</p>
+    </div>
+  </section>
+</body>
+</html>
